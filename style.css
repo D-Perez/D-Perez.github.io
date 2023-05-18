@@ -1,5 +1,33 @@
-header {
-    background-color: #333;
-    padding: 20px;
-    color: #fff;
-  }
+* {
+    margin: 0;
+    padding: 0;
+    /* height: 100%; This fixed my gradient issue by expanding the viewport */
+    box-sizing: border-box;
+    font-family: 'Instrument Sans', sans-serif;
+}
+
+body {
+    background: #001a33;
+    height: 100%;
+}
+
+.header { 
+    position: fixed; /* Will stay fixed even when scrolled */
+    /* The next two lines anchor the header container in place */
+    top: 0;
+    left: 0;
+    width: 100%; /* The width of the header class, which spans the whole browser */
+    padding: 20px 10%; /* First argument is the top and bottom padding, second is left and right padding */
+    background: goldenrod;
+    display: flex; /* The display is set to a flexbox */
+    justify-content: space-between; /* Distributes the flex items equally */
+    align-items: center; /* Aligns items vertically in the center */
+    z-index: 100; /* Placed before any elements with a lower value */
+}
+
+.logo {
+    font-size: 30px;
+    color: black;
+    text-decoration: none;
+    font-weight: 600;
+}
